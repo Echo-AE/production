@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "outDir": "./build/",
+      "noImplicitAny": true,
+      "target": "es5",
+      "jsx": "react-jsx",
+      "allowJs": true,
+      "moduleResolution": "node",
+      "module": "esnext",
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "baseUrl": ".",
+    },
+    "ts-node": {
+      "compilerOptions": {
+        "module": "CommonJS",
+      }
+    }
+  }
