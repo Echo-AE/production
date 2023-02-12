@@ -1,4 +1,3 @@
-
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
@@ -13,15 +12,15 @@ i18n
         fallbackLng: false,
         debug: __IS_DEV__,
 
-    interpolation: {
-        escapeValue: false,
-    },
-    backend: {
-        loadPath: '/locales/{{lng}}/{{ns}}.json',
-    },
-    react: {
-        useSuspense: true,
-    },
-});
+        interpolation: {
+            escapeValue: false,
+        },
+        backend: {
+            loadPath: '/locales/{{lng}}/{{ns}}.json',
+        },
+        react: {
+            useSuspense: true,
+        },
+    });
 
 export default i18n;

@@ -1,10 +1,10 @@
 import { ComponentType, lazy } from 'react';
 
 export const asyncPageGenerator = (factory: () => Promise<{ default: ComponentType<any> }>) => {
-const Page = lazy(factory);
+    const Page = lazy(factory);
 
-return () => <Page />;
-}
+    return () => <Page />;
+};
 
 /*
 так использовать:
