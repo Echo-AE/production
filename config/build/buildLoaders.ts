@@ -58,6 +58,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
                             keyAsDefaultValue: true,
                             saveMissing: true,
                             outputPath: 'public/locales/{{locale}}/{{ns}}.json',
+                            excludes: ['**/*.test.ts', '**/*.test.tsx'],
                         },
                     ],
                 ],
