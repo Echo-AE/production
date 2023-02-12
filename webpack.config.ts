@@ -21,6 +21,7 @@ export default (env: BuildEnv) => {
         paths,
         isDev,
         port,
+        cache: false,
     })
 
     return config;
