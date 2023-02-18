@@ -14,6 +14,11 @@
           "*": ["./src/*"]
       },
       "strictBindCallApply": true,
+      "plugins": [
+        {
+          "name": "typescript-plugin-css-modules",
+        }
+      ],
     },
     "ts-node": {
       "compilerOptions": {
@@ -22,6 +27,7 @@
     },
     "include": [
       "./config/jest/jest.setup.ts",
-      "./src/**/*ts(x)"
+      "./src/**/*ts",
+      "./src/**/*tsx"
     ]
   }

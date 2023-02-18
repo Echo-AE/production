@@ -12,4 +12,8 @@ module.exports = {
         builder: '@storybook/builder-webpack5',
     },
     staticDirs: ['../../public'],
+    env: (config) => ({
+        ...config,
+        __IS_DEV__: true,
+    }),
 };
