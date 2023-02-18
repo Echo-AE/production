@@ -12,14 +12,16 @@
       "baseUrl": ".",
       "paths": {
           "*": ["./src/*"]
-      }
+      },
+      "strictBindCallApply": true,
     },
     "ts-node": {
       "compilerOptions": {
-        "module": "CommonJS",
+        "module": "CommonJS"
       }
     },
     "include": [
       "./config/jest/jest.setup.ts",
+      "./src/**/*ts(x)"
     ]
   }
