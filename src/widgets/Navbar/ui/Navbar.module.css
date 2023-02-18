@@ -1,28 +1,27 @@
 .Navbar {
-  width: 100%;
-  height: var(--navbar-height);
-  background: var(--inverted-bg-color);
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  gap: 10px;
+    width: 100%;
+    height: var(--navbar-height);
+    background: var(--inverted-bg-color);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
 }
 
 .links {
-  display: flex;
-  gap: 10px;
-  margin-left: auto;
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
 }
 
 .mainLink {
-  color: var(--inverted-primary-color);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2rem;
-  transition: all 0.2s ease-in-out;
-}
-.mainLink:hover {
-  color: var(--inverted-secondary-color);
+    color: var(--inverted-primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.2s ease-in-out;
 }
 
-/*# sourceMappingURL=Navbar.module.css.map */
+.mainLink:hover {
+    color: var(--inverted-secondary-color);
+}
