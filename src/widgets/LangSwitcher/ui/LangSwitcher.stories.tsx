@@ -4,6 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Theme } from 'app/providers/themeProvider';
 import { LangSwitcher } from './LangSwitcher';
 import { ThemeDecorator } from '../../../shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { I18nDecorator } from '../../../shared/config/storybook/I18nDecorator/I18nDecorator';
 
 export default {
     title: 'widget/LangSwitcher',
@@ -20,4 +21,4 @@ Common.args = {};
 
 export const CommonDark = Template.bind({});
 CommonDark.args = {};
-CommonDark.decorators = [ThemeDecorator(Theme.DARK)];
+CommonDark.decorators = [I18nDecorator, ThemeDecorator(Theme.DARK)];
