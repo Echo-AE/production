@@ -13,7 +13,7 @@ export default {
     },
 } as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
@@ -24,6 +24,12 @@ export const Clear = Template.bind({});
 Clear.args = {
     children: 'Button',
     theme: ButtonTheme.CLEAR,
+};
+
+export const ClearInverted = Template.bind({});
+ClearInverted.args = {
+    children: 'Button',
+    theme: ButtonTheme.CLEAR_INVERTED,
 };
 
 export const Outlined = Template.bind({});
