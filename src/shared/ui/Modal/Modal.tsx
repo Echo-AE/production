@@ -2,6 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import React, { ReactNode, useCallback, useEffect } from 'react';
 import { Portal } from 'shared/ui/Portal/Portal';
+import { useTheme } from 'app/providers/themeProvider';
 import cls from './Modal.module.scss';
 
 interface ModalProps {
@@ -22,6 +23,7 @@ export const Modal = ({
     const { t } = useTranslation('modal');
     const [isClosing, setIsClosing] = React.useState(false);
     const timerRef = React.useRef<ReturnType<typeof setTimeout>>();
+    const { theme } = useTheme();
 
     const closeHandler = useCallback(() => {
         if (onClose) {
@@ -42,14 +44,10 @@ export const Modal = ({
     useEffect(() => {
         if (isOpen) {
             window.addEventListener('keydown', onKeyDown);
+        } else if (timerRef.current) {
+            clearTimeout(timerRef.current);
+            window.removeEventListener('keydown', onKeyDown);
         }
-
-        return () => {
-            if (timerRef.current) {
-                clearTimeout(timerRef.current);
-                window.removeEventListener('keydown', onKeyDown);
-            }
-        };
     }, [isOpen, onKeyDown]);
 
     const mods: Record<string, boolean> = {
@@ -63,7 +61,7 @@ export const Modal = ({
 
     return (
         <Portal>
-            <div className={classNames(cls.modal, mods, [className])}>
+            <div className={classNames(cls.modal, mods, [className, theme])}>
                 <div className={cls.overlay} onClick={closeHandler}>
                     <div
                         className={cls.content}
