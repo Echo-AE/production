@@ -19,7 +19,10 @@ export default {
 const Template: ComponentStory<typeof Input> = args => <Input {...args} />;
 
 export const Common = Template.bind({});
-Common.args = {};
+Common.args = {
+    placeholder: 'Placeholder',
+    value: 'Value',
+};
 
 export const CommonDark = Template.bind({});
 CommonDark.args = {};
